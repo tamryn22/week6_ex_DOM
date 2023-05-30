@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script src="js/index.js"></script>
+
+    <title>Week 6: DOM</title>
+  </head>
+  <body>
+
+    <form id="pizzaForm" onchange="realTimeCost()">
+      <h3>Custom Pizza Maker</h3>
+      <div class="left">
+        <input type="text" class="form-control" placeholder="Name Your Pizza" id="pizzaName">
+        <select class="form-control" id="size">
+          <option>Choose a Size</option>
+          <option>Small</option>
+          <option>Medium</option>
+          <option>Large</option>
+        </select>
+      </div>
+
+      <div class="right">
+        <div class="orderCost" id="realTimeCost">R0.00</div>
+      </div>
+
+        <div class="base-options">
+
+          <h3>Base Options</h3>
+
+          <div class="base-checked">
+            <input class="form-check-input" type="radio" name="baseRadio" id="standard" data-cost="10" value="Standard" checked>
+            <label class="form-check-label" for="standard">
+              Standard Base
+            </label>
+          </div>
+
+          <div class="base-check">
+            <input class="form-check-input" type="radio" name="baseRadio" id="deep" data-cost="15" value="Deep Dish">
+            <label class="form-check-label" for="deep">
+              Deep Dish Base
+            </label>
+          </div>
+
+          <div class="base-check">
+            <input class="form-check-input" type="radio" name="baseRadio" id="thin" data-cost="20" value="Thin & Crispy">
+            <label class="form-check-label" for="thin">
+              Thin & Crispy Base
+            </label>
+          </div>
+
+        </div>
+
+        <div class="toppings">
+          <h3>Topping Options</h3>
+
+          <div class="top-check">
+            <input class="form-check-input" name="toppings" type="checkbox" value="salami" id="salami" data-cost="15">
+            <label class="form-check-label" for="salami">
+              Salami
+            </label>
+          </div>
+
+          <div class="top-check">
+            <input class="form-check-input" name="toppings" type="checkbox" value="olives" id="olives" data-cost="10">
+            <label class="form-check-label" for="olives">
+              Olives
+            </label>
+          </div>
+
+          <div class="top-check">
+            <input class="form-check-input" name="toppings" type="checkbox" value="feta" id="feta" data-cost="8">
+            <label class="form-check-label" for="feta">
+              Feta
+            </label>
+          </div>
+
+          <div class="top-check">
+            <input class="form-check-input" name="toppings" type="checkbox" value="pineapple" id="pineapple" data-cost="12">
+            <label class="form-check-label" for="pineapple">
+              Pine Apple
+            </label>
+          </div>
+
+          <div class="top-check">
+            <input class="form-check-input" name="toppings" type="checkbox" value="ham" id="ham" data-cost="17">
+            <label class="form-check-label" for="ham">
+              Ham
+            </label>
+          </div>
+
+          <div class="top-check">
+            <input class="form-check-input" name="toppings" type="checkbox" value="bacon" id="bacon" data-cost="20">
+            <label class="form-check-label" for="bacon">
+              Bacon
+            </label>
+          </div>
+
+          <div class="top-check">
+            <input class="form-check-input" name="toppings" type="checkbox" value="anchovies" id="anchovies" data-cost="14">
+            <label class="form-check-label" for="anchovies">
+              Anchovies
+            </label>
+          </div>
+
+          <div class="top-check">
+            <input class="form-check-input" name="toppings" type="checkbox" value="extra" id="extra" data-cost="18">
+            <label class="form-check-label" for="extra">
+              Extra Cheese
+            </label>
+          </div>
+
+          <div class="top-check">
+            <input class="form-check-input" name="toppings" type="checkbox" value="chilles" id="chilles" data-cost="12">
+            <label class="form-check-label" for="chilles">
+              Chillies
+            </label>
+          </div>
+
+          </div>
+          <button class="btn btn-primary" type="button" onclick="makePizza(); displayOrder()" >Make My Pizza</button>    
+
+        </form>
+
+    <div class="output">
+      <div class="outHeader">
+        <h3>Your Current Order:</h3>
+        <div class="totalOrder"><h3 id="orderTotal">R0.00</h3></div>
+      </div>
+
+      <div id="orders">
+        </div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,105 @@
+form{
+    width: 50%;
+    margin:  0 auto;
+    margin-top: 50px;
+}
+
+.left{
+    width: 60%;
+    float: left;
+    height: 130px;
+}
+
+.right{
+    height: 130px;
+    width: 40%;
+    float: left;
+    text-align: center;
+    padding-left: 5%;
+    padding-right: 5%;
+   
+}
+
+.orderCost{
+    background-color: #f4903f;
+    font-size: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 5px;
+}
+
+.card{
+    width: 40%;
+    height: auto;
+    border-radius: 10px;
+    background-color: #eabb95;
+    margin-top: 15px;
+    float: left;
+    margin: 2%;
+    color:#f4903f
+}
+
+input{
+    margin-top: 15px;
+}
+
+select{
+    margin-top: 15px;
+}
+
+.btn{
+    margin-top: 15px;
+}
+
+.base-options{
+    width: 33%;
+    height: 100px;
+    margin-top: 20px;
+    padding-left: 20px;
+    float: left;
+}
+
+.base-options h3{
+   margin-left:  -20px;
+   margin-bottom: 20px;
+}
+
+.toppings{
+    width: 66%;
+    margin-top: 20px;
+    float: left;
+    padding-left: 20px;
+}
+
+.toppings h3{
+    margin-left:  -20px;
+    margin-bottom: 20px;
+}
+
+.top-check{
+    width: 33%;
+    float: left;
+}
+
+
+.output{
+    width: 50%;
+    height: 45px;
+    margin:  0 auto;
+    margin-top: 50px;
+    border-bottom: 2px solid #2b2b2b;
+}
+
+.outHeader h3{
+    float: left;
+}
+
+.totalOrder{
+    float: left;
+    margin-left: 48%;
+}
+
+.totalOrder h3{
+    font-size: 40px;
+    margin-top: -10px;
+}
